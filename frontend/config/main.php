@@ -40,11 +40,12 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
-                '<controller:\w+>/<id:\d+>' => '<controller>/view',
-                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-                '<controller:\w+>/<action:\w+>' => '<controller>/<action>'
-            ],
+            'rules' => require_once 'urls.php',
+            // 'rules' => [
+            //     '<controller:\w+>/<id:\d+>' => '<controller>/view',
+            //     '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+            //     '<controller:\w+>/<action:\w+>' => '<controller>/<action>'
+            // ],
         ],
         
     ],
